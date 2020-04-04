@@ -1,0 +1,27 @@
+package com.ss.drools.rules;
+
+import com.ss.drools.model.ProductInfo
+
+rule "Gold Offer"
+
+  when
+          productInfoObject:ProductInfo(productType=="Gold")
+  then
+          productInfoObject.setDiscount(10.0);
+          end
+        
+rule "Platinum Offer"
+
+  when
+          productInfoObject:ProductInfo(productType=="Platinum")
+  then
+          productInfoObject.setDiscount(15.0);
+          end
+          
+ rule "Diamond Offer"
+
+  when
+          productInfoObject:ProductInfo(productType=="Diamond")
+  then
+          productInfoObject.setDiscount(20.0);
+          end
